@@ -1,5 +1,5 @@
 import streamlit as st
-import pandas as pd
+
 import pickle
 import requests
 
@@ -39,7 +39,7 @@ def rating(movie_id):
 
 st.set_page_config(layout="wide")
 
-data = pd.read_csv("Movies_data.csv")
+data = pickle.load(open("data.pkl","rb"))
 similar_score=pickle.load(open("similar_score.pkl","rb"))
 
 
