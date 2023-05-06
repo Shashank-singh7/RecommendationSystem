@@ -39,7 +39,8 @@ def rating(movie_id):
 
 st.set_page_config(layout="wide")
 
-data = pickle.load(open("data.pkl","rb"))
+#data = pickle.load(open("data.pkl","rb"))
+data=pd.read_pickle('data.pkl')
 similar_score=pickle.load(open("similar_score.pkl","rb"))
 
 
